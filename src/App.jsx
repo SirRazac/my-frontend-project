@@ -3,51 +3,83 @@
 // ------------------------------------------------------------------------------
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 // ------------------------------------------------------------------------------
 // Import Components
 // ------------------------------------------------------------------------------
-import NavBar from './component/navbar';
+import Navbar from "./component/navbars/navbar.jsx";
 // ------------------------------------------------------------------------------
 // Import Pages
 // ------------------------------------------------------------------------------
-import BasePage from './basepage';
+import BasePage from './pages/basepage.jsx';
 import ShopPage from './pages/shoppage/shoppage.jsx';
 // ------------------------------------------------------------------------------
 // Class
 // ------------------------------------------------------------------------------
-class App extends Component {
-    state = {
-        isSidebarOpen: true,
-        items: [],
-        menuItems: [
-            {
-                label: 'Shop',
-                link: '/shoppage',
-                subItems: [
-                    {}
-                ]
-            },
-            {
-                label: 'Kontakt',
-                link: '#kontakt',
-                subItems: [
-                    {}
-                ]
-            }
-        ]
-
-
+const menuItems = [
+    {
+      label: 'Home',
+      link: '/',
+      subItems: [
+        { label: 'Shop', link: '/shoppage' },
+        { label: 'Submenu 2', link: '/home/sub2' },
+        { label: 'Submenu 3', link: '/home/sub3' }
+      ]
+    },
+    {
+      label: 'Menü 2',
+      link: '#about',
+      subItems: [
+        { label: 'Submenu 1', link: '#about/sub1' },
+        { label: 'Submenu 2', link: '#about/sub2' },
+        { label: 'Submenu 3', link: '#about/sub3' }
+      ]
+    },
+    {
+      label: 'Menü 3',
+      link: '#services',
+      subItems: [
+        { label: 'Submenu 1', link: '#services/sub1' },
+        { label: 'Submenu 2', link: '#services/sub2' },
+        { label: 'Submenu 3', link: '#services/sub3' }
+      ]
+    },
+    {
+      label: 'Menü 4',
+      link: '#portfolio',
+      subItems: [
+        { label: 'Submenu 1', link: '#portfolio/sub1' },
+        { label: 'Submenu 2', link: '#portfolio/sub2' },
+        { label: 'Submenu 3', link: '#portfolio/sub3' }
+      ]
+    },
+    {
+      label: 'Menü 5',
+      link: '#contact',
+      subItems: [
+        { label: 'Submenu 1', link: '#contact/sub1' },
+        { label: 'Submenu 2', link: '#contact/sub2' },
+        { label: 'Submenu 3', link: '#contact/sub3' }
+      ]
     }
+  ];
+  class App extends Component {
     render() {
         return (
             <Router>
                 <React.Fragment>
-                <NavBar title="Home" menuItems={this.state.menuItems} />
-                        <Routes>
-                            <Route path="/" element={<BasePage />} />
-                            <Route path="/shoppage" element={<ShopPage />} />
-                        </Routes>
+                    <Navbar title="Home" menuItems={menuItems} />
+                    <Routes>
+                        <Route path="/" element={<BasePage />} />
+                        <Route path="/shoppage" element={<ShopPage />} />
+                    </Routes>
+                    <footer className="bg-dark text-white text-center py-3">
+                        <div className="container">
+                            <p>&copy; 2024 Das gehört alles mir. Alle Rechte vorbehalten.</p>
+                        </div>
+                    </footer>
                 </React.Fragment>
             </Router>
         );
