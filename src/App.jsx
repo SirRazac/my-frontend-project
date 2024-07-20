@@ -15,6 +15,8 @@ import Navbar from "./component/navbars/navbar.jsx";
 // ------------------------------------------------------------------------------
 import BasePage from './pages/basepage.jsx';
 import ShopPage from './pages/shoppage/shoppage.jsx';
+import QrCode from './pages/qrcode/qrcode.jsx';
+import Weather from './pages/weather/weather.jsx';
 // ------------------------------------------------------------------------------
 // Class
 // ------------------------------------------------------------------------------
@@ -23,9 +25,9 @@ const menuItems = [
       label: 'Home',
       link: '/',
       subItems: [
+        { label: 'QR Code Generator', link: '/qrcode' },
         { label: 'Shop', link: '/shoppage' },
-        { label: 'Submenu 2', link: '/home/sub2' },
-        { label: 'Submenu 3', link: '/home/sub3' }
+        { label: 'Wetter', link: '/weather' }
       ]
     },
     {
@@ -74,6 +76,8 @@ const menuItems = [
                     <Routes>
                         <Route path="/" element={<BasePage />} />
                         <Route path="/shoppage" element={<ShopPage />} />
+                        <Route path="/qrcode" element={<QrCode />} />
+                        <Route path="/weather" element={<Weather />} />
                     </Routes>
                     <footer className="bg-dark text-white text-center py-3">
                         <div className="container">
