@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 // Import Components
 // ------------------------------------------------------------------------------
 import Navbar from "./component/navbars/navbar.jsx";
+
 // ------------------------------------------------------------------------------
 // Import Pages
 // ------------------------------------------------------------------------------
@@ -17,6 +18,7 @@ import BasePage from './pages/basepage.jsx';
 import ShopPage from './pages/shoppage/shoppage.jsx';
 import QrCode from './pages/qrcode/qrcode.jsx';
 import Weather from './pages/weather/weather.jsx';
+
 // ------------------------------------------------------------------------------
 // Class
 // ------------------------------------------------------------------------------
