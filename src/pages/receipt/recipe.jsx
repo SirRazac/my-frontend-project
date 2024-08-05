@@ -1,0 +1,103 @@
+// ------------------------------------------------------------------------------
+// Import Packages
+// ------------------------------------------------------------------------------
+import React, { useState } from "react";
+
+// ------------------------------------------------------------------------------
+// Class
+// ------------------------------------------------------------------------------
+const Recipe = () => {
+  const [ingredients, setIngredients] = useState("");
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSearch = async () => {
+    setLoading(true);
+    setError(null);
+
+    const formattedIngredients = encodeURIComponent(ingredients.trim());
+    const url = `https://gustar-io-deutsche-rezepte.p.rapidapi.com/search_api?text=${formattedIngredients}`;
+
+    const options = {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "a86e5ae0e6mshd0b44e1c0d45919p1e96b5jsn3e873f3c45ed",
+        "x-rapidapi-host": "gustar-io-deutsche-rezepte.p.rapidapi.com",
+      },
+    };
+
+    try {
+      const response = await fetch(url, options);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const result = await response.json();
+      console.log("API Response:", result);
+
+      if (Array.isArray(result) && result.length > 0) {
+        setRecipes(result);
+      } else {
+        setRecipes([]);
+        setError("Keine Rezepte gefunden.");
+      }
+    } catch (error) {
+      setError(`Fehler beim Abrufen der Rezepte: ${error.message}`);
+      console.error("Fehler:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="container mt-5">
+      <h1 className="text-center mb-4">Rezeptsuche</h1>
+      <div className="input-group mb-3">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Geben Sie Zutaten ein, z.B. Tomaten, Käse"
+          value={ingredients}
+          onChange={(e) => setIngredients(e.target.value)}
+        />
+        <button className="btn btn-primary" onClick={handleSearch}>
+          Suche
+        </button>
+      </div>
+      {loading && <p className="text-center">Laden...</p>}
+      {error && <p className="text-center text-danger">{error}</p>}
+      {recipes.length > 0 && (
+        <div className="card-deck mt-4">
+          {recipes.map((recipe, index) => (
+            <div className="card" key={index}>
+              <img
+                src={
+                  recipe.image_urls && recipe.image_urls.length > 0
+                    ? recipe.image_urls[0]
+                    : "default-image-url.jpg"
+                }
+                className="card-img-top"
+                alt={recipe.title || "Kein Titel verfügbar"}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  {recipe.title || "Kein Titel verfügbar"}
+                </h5>
+                <a
+                  href={recipe.url || "#"}
+                  className="btn btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Zum Rezept
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Recipe;

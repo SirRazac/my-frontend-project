@@ -1,24 +1,23 @@
-/* WeatherLocations.module.css */
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Stellt sicher, dass die Höhe des Containers mindestens die Höhe des Viewports beträgt */
+  min-height: 100vh;                    /*ensures that the height of the container is at least the height of the viewport */
   padding: 20px;
   font-family: Arial, sans-serif;
 }
 
 .header {
-  text-align: center; /* Zentriert die Überschrift */
+  text-align: center;                   /*centers headline*/
   margin-top: 0;
-  margin-bottom: 20px; /* Abstand zur nächsten Sektion */
+  margin-bottom: 20px;                  /*distance to the next section */
 }
 
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 40px; /* Abstand zum Fußbereich */
-  flex: 1; /* Flex-Bereich für den Rest der Seite */
+  margin-bottom: 40px;                  /*distance to the foot area*/
+  flex: 1;                              /*flex area for the rest of the page*/
 }
 
 .locationContainer {
@@ -28,21 +27,20 @@
   margin: 10px;
   width: 200px;
   text-align: center;
-  /* Keine flex-Eigenschaft hier, um die Größe der Karten konstant zu halten */
 }
 
 .cold {
-  background-color: #00f; /* Blau für kaltes Wetter */
+  background-color: #00f;             /*blue cold weather*/
 }
 .cool {
-  background-color: #0ff; /* Hellblau für kühles Wetter */
+  background-color: #0ff;             /*light blue fresh weather*/
 }
 .mild {
-  background-color: rgb(217, 255, 0); /* Grün für mildes Wetter */
+  background-color: rgb(217, 255, 0); /*green mild weather*/
 }
 .warm {
-  background-color: rgb(255, 187, 0); /* Gelb für warmes Wetter */
+  background-color: rgb(255, 187, 0); /*yellow warm weather*/
 }
 .hot {
-  background-color: #f00; /* Rot für heißes Wetter */
+  background-color: #f00;             /*red hot weather*/
 }
