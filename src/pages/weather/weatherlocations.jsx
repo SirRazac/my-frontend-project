@@ -99,7 +99,7 @@ class WeatherLocations extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h1 className={styles.header}>Wetter in Familienstädten</h1>
+        <h1 className={styles.header}>Wetter in unseren Familienstädten</h1>
         <div className={styles.grid}>{this.renderWeatherInfo()}</div>
       </div>
     );
