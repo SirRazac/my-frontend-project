@@ -34,28 +34,28 @@ class BasePage extends Component {
                     className="img-fluid rounded"
                     alt="Spielplatz"
                   />
-                  <p className="mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies urna id lacus facilisis, ac condimentum nunc finibus. Donec euismod neque at velit cursus, in pulvinar quam interdum.
-                  </p>
                 </div>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card">
                 <div className="card-body">
-                  <h2 className="card-title">Sidebar</h2>
+                  <h2 className="card-title">Meine Projekte</h2>
                   <p className="card-text">
-                    In der Sidebar findest du in Zukunft zusätzliche Informationen und Links zu anderen Projekten und Themen, die mich interessieren.
+                    Hier findest du eine Übersicht inkl. Links meiner Projekte und Themen, die mich interessieren.
                   </p>
                   <ul className="list-group">
                     <li className="list-group-item">
-                      <a href="#link1" className="text-decoration-none">Link 1</a>
+                      <a href="/qrcode" className="text-decoration-none">QR-Code-Generator</a>
                     </li>
                     <li className="list-group-item">
-                      <a href="#link2" className="text-decoration-none">Link 2</a>
+                      <a href="/shoppage" className="text-decoration-none">Onlineshopp</a>
                     </li>
                     <li className="list-group-item">
-                      <a href="#link3" className="text-decoration-none">Link 3</a>
+                      <a href="/weather" className="text-decoration-none">Wetter-App</a>
+                    </li>
+                    <li className="list-group-item">
+                      <a href="/recipe" className="text-decoration-none">Rezeptgenerator</a>
                     </li>
                   </ul>
                 </div>
