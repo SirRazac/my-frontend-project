@@ -11,14 +11,14 @@ class QrCode extends Component {
     inputValue: "",
     qrCodeUrl: "",
   };
+
   handleInputChange = (event) => {
     this.setState({ inputValue: event.target.value });
   };
+
   handleButtonClick = async () => {
     const { inputValue } = this.state;
-    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(
-      inputValue
-    )}`;
+    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(inputValue)}`;
     try {
       const response = await fetch(apiUrl);
       if (response.ok) {
@@ -30,6 +30,7 @@ class QrCode extends Component {
       console.error("Network error:", error);
     }
   };
+
   render() {
     return (
       <div className="container d-flex flex-column align-items-center vh-100 bg-light p-4">
@@ -41,7 +42,7 @@ class QrCode extends Component {
                 type="text"
                 className="form-control border-dark"
                 placeholder="Inhalt eingeben"
-                aria-label="Example text with button addon"
+                aria-label="Inhalt eingeben"
                 aria-describedby="button-addon1"
                 value={this.state.inputValue}
                 onChange={this.handleInputChange}
@@ -57,15 +58,25 @@ class QrCode extends Component {
             </div>
           </div>
         </div>
-        {this.state.qrCodeUrl && (
-          <div className="mt-3">
-            <img
-              src={this.state.qrCodeUrl}
-              alt="QR Code"
-              className="border border-dark"
-            />
+        <div className="mt-3 text-center">
+          {this.state.qrCodeUrl && (
+            <div className="mb-3">
+              <img
+                src={this.state.qrCodeUrl}
+                alt="Generierter QR-Code"
+                className="border border-dark mb-3"
+              />
+            </div>
+          )}
+          <div className="alert alert-info">
+            <h5 className="alert-heading">Was ist im QR-Code enthalten?</h5>
+            <p>Der QR-Code enthält den Text oder die URL, die im Eingabefeld eingegeben wird.</p>
+            <h5 className="alert-heading">Wozu kann ich den QR-Code verwenden?</h5>
+            <p>QR-Codes sind nützlich, um Informationen schnell zu teilen, Websites zu besuchen oder Produkte zu verlinken. Du kannst mit einem QR-Code-Scanner auf Deinem Smartphone gescannt werden, um die darin enthaltenen Informationen sofort zu erhalten.</p>
+            <h5 className="alert-heading">Wie erstelle ich hier einen QR-Code?</h5>
+            <p>Gib einfach den gewünschten Text oder die URL in das Eingabefeld ein und klicke auf "Hier klicken". Der QR-Code wird sofort erstellt und angezeigt.</p>
           </div>
-        )}
+        </div>
       </div>
     );
   }

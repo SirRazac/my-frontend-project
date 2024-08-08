@@ -6,6 +6,15 @@ import React, { useState } from "react";
 // ------------------------------------------------------------------------------
 // Class
 // ------------------------------------------------------------------------------
+const shuffleArray = (array) => {
+  let shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
+
 const Recipe = () => {
   const [ingredients, setIngredients] = useState("");
   const [recipes, setRecipes] = useState([]);
@@ -36,7 +45,10 @@ const Recipe = () => {
       console.log("API Response:", result);
 
       if (Array.isArray(result) && result.length > 0) {
-        setRecipes(result);
+        // Mische die Rezepte zufällig und wähle die ersten 9 aus
+        const shuffledRecipes = shuffleArray(result);
+        setRecipes(shuffledRecipes.slice(0, 9));
+        console.log(shuffledRecipes.slice(0, 9));
       } else {
         setRecipes([]);
         setError("Keine Rezepte gefunden.");
@@ -67,30 +79,36 @@ const Recipe = () => {
       {loading && <p className="text-center">Laden...</p>}
       {error && <p className="text-center text-danger">{error}</p>}
       {recipes.length > 0 && (
-        <div className="card-deck mt-4">
+        <div className="row mt-4">
           {recipes.map((recipe, index) => (
-            <div className="card" key={index}>
-              <img
-                src={
-                  recipe.image_urls && recipe.image_urls.length > 0
-                    ? recipe.image_urls[0]
-                    : "default-image-url.jpg"
-                }
-                className="card-img-top"
-                alt={recipe.title || "Kein Titel verfügbar"}
-              />
-              <div className="card-body">
-                <h5 className="card-title">
-                  {recipe.title || "Kein Titel verfügbar"}
-                </h5>
-                <a
-                  href={recipe.url || "#"}
-                  className="btn btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Zum Rezept
-                </a>
+            <div
+              className="col-md-4 col-sm-6 col-12"
+              key={index}
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card" style={{ width: "100%", height: "100%" }}>
+                <img
+                  src={
+                    recipe.image_urls && recipe.image_urls.length > 0
+                      ? recipe.image_urls[0]
+                      : "default-image-url.jpg"
+                  }
+                  className="card-img-top"
+                  alt={recipe.title || "Kein Titel verfügbar"}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">
+                    {recipe.title || "Kein Titel verfügbar"}
+                  </h5>
+                  <a
+                    href={recipe.source}
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Zum Rezept
+                  </a>
+                </div>
               </div>
             </div>
           ))}
