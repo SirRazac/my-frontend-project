@@ -69,8 +69,8 @@ class QrCode extends Component {
             </div>
           )}
           <div className="alert alert-info">
-            <h5 className="alert-heading">Was ist im QR-Code enthalten?</h5>
-            <p>Der QR-Code enthält den Text oder die URL, die im Eingabefeld eingegeben wird.</p>
+            <h5 className="alert-heading">Welche Informationen sind im QR-Code enthalten?</h5>
+            <p>Der QR-Code enthält den Text oder die URL, die im Eingabefeld eingegeben wird. Jeglicher eingegebener Inhalt, wird als QR-Code verarbeitet</p>
             <h5 className="alert-heading">Wozu kann ich den QR-Code verwenden?</h5>
             <p>QR-Codes sind nützlich, um Informationen schnell zu teilen, Websites zu besuchen oder Produkte zu verlinken. Du kannst mit einem QR-Code-Scanner auf Deinem Smartphone gescannt werden, um die darin enthaltenen Informationen sofort zu erhalten.</p>
             <h5 className="alert-heading">Wie erstelle ich hier einen QR-Code?</h5>

@@ -19,3 +19,28 @@
         flex-direction: column;
     }
 }
+
+/*Shop-Page*/
+.shop-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  /* Anpassungen für die Produktbeschreibung */
+  .product-container .product {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .product-container .product:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Anpassungen für den Hinweisbereich */
+  .alert {
+    border-radius: 10px;
+  }
+  

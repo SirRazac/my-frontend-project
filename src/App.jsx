@@ -41,34 +41,8 @@ const menuItems = [
       { label: "Submenu 2", link: "#about/sub2" },
       { label: "Submenu 3", link: "#about/sub3" },
     ],
-  },
-  {
-    label: "Menü 3",
-    link: "#services",
-    subItems: [
-      { label: "Submenu 1", link: "#services/sub1" },
-      { label: "Submenu 2", link: "#services/sub2" },
-      { label: "Submenu 3", link: "#services/sub3" },
-    ],
-  },
-  {
-    label: "Menü 4",
-    link: "#portfolio",
-    subItems: [
-      { label: "Submenu 1", link: "#portfolio/sub1" },
-      { label: "Submenu 2", link: "#portfolio/sub2" },
-      { label: "Submenu 3", link: "#portfolio/sub3" },
-    ],
-  },
-  {
-    label: "Menü 5",
-    link: "#contact",
-    subItems: [
-      { label: "Submenu 1", link: "#contact/sub1" },
-      { label: "Submenu 2", link: "#contact/sub2" },
-      { label: "Submenu 3", link: "#contact/sub3" },
-    ],
-  },
+  }
+ 
 ];
 class App extends Component {
   render() {

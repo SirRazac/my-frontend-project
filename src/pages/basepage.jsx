@@ -27,7 +27,7 @@ class BasePage extends Component {
                 <div className="card-body">
                   <h2 className="card-title">Hauptinhalt</h2>
                   <p className="card-text">
-                    Diese Seite ist meine Spielwiese, auf der ich verschiedene Aspekte von Webentwicklung teste und erlerne. Hier findest du Beispiele für unterschiedliche Techniken und Designs, die ich im Rahmen meiner Lernreise entwickelt habe.
+                    Diese Seite ist meine Spielwiese, auf der ich verschiedene Aspekte von Webentwicklung teste und erlerne. Hier findest du Beispiele für unterschiedliche Techniken und Designs, die ich im Rahmen meiner Lernreise aktuell entwickel und entwickelt habe.
                   </p>
                   <img
                     src="/assets/image/spielplatz.jpeg"
