@@ -14,9 +14,9 @@ class BasePage extends Component {
       <div className="d-flex flex-column min-vh-100">
         <header className="bg-dark text-white text-center py-5">
           <div className="container">
-            <h1 className="display-4">Willkommen auf meiner Spielwiese</h1>
+            <h1 className="display-4">Willkommen auf meiner <strong>Spielwiese</strong></h1>
             <p className="lead">
-              Hier teste ich verschiedene Techniken, baue Komponenten und erweitere meine Fähigkeiten. Es ist mein eigenes privates Portfolio kleinerer Projekte und Experimente.
+              Hier teste ich verschiedene Techniken, baue Komponenten und erweitere meine Fähigkeiten. Es ist mein <strong><u>eigenes privates Portfolio</u></strong> kleinerer Projekte und Experimente.
             </p>
           </div>
         </header>
@@ -25,7 +25,7 @@ class BasePage extends Component {
             <div className="col-md-8">
               <div className="card mb-4">
                 <div className="card-body">
-                  <h2 className="card-title">Hauptinhalt</h2>
+                  <h2 className="card-title"><u>Was man hier unter anderem finden wird:</u></h2>
                   <p className="card-text">
                     Diese Seite ist meine Spielwiese, auf der ich verschiedene Aspekte von Webentwicklung teste und erlerne. Hier findest du Beispiele für unterschiedliche Techniken und Designs, die ich im Rahmen meiner Lernreise aktuell entwickel und entwickelt habe.
                   </p>
@@ -40,7 +40,7 @@ class BasePage extends Component {
             <div className="col-md-4">
               <div className="card">
                 <div className="card-body">
-                  <h2 className="card-title">Meine Projekte</h2>
+                  <h2 className="card-title"><u>Meine Projekte:</u></h2>
                   <p className="card-text">
                     Hier findest du eine Übersicht inkl. Links meiner Projekte und Themen, die mich interessieren.
                   </p>

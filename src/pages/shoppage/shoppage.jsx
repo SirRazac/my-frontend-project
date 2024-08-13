@@ -55,7 +55,7 @@ class ShopPage extends Component {
       <div className="d-flex flex-column min-vh-100">
         <header className="bg-dark text-white text-center py-5">
           <div className="container">
-            <h1 className="display-4">Willkommen im Prototyp meines Online-Shops</h1>
+            <h1 className="display-4">Willkommen im <strong>Prototyp</strong> meines Online-Shops</h1>
             <p className="lead">
               Dieser Shop ist derzeit im Aufbau und noch in seiner Rohform. Viele
               Funktionen sind in Arbeit, aber Du kannst bereits erste Produkte
