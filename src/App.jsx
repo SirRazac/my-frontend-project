@@ -19,6 +19,7 @@ import ShopPage from "./pages/shoppage/shoppage.jsx";
 import QrCode from "./pages/qrcode/qrcode.jsx";
 import Weather from "./pages/weather/weather.jsx";
 import Recipe from "./pages/recipe/recipe.jsx";
+import HtmlTutorial from "./pages/htmltutorial/htmltutorial.jsx";
 
 // ------------------------------------------------------------------------------
 // Class
@@ -38,7 +39,7 @@ const menuItems = [
     link: "#about",
     subItems: [
       { label: "Rezept Generator", link: "/recipe" },
-      { label: "Submenu 2", link: "#about/sub2" },
+      { label: "HTML-Tutorial", link: "/htmltutorial" },
       { label: "Submenu 3", link: "#about/sub3" },
     ],
   }
@@ -57,6 +58,7 @@ class App extends Component {
               <Route path="/qrcode" element={<QrCode />} />
               <Route path="/weather" element={<Weather />} />
               <Route path="/recipe" element={<Recipe />} />
+              <Route path="/htmltutorial" element={<HtmlTutorial />} />
             </Routes>
             <footer className="bg-dark text-white text-center py-3 mt-auto">
               <div className="container">
