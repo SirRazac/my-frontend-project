@@ -1,50 +1,77 @@
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;                    /*ensures that the height of the container is at least the height of the viewport */
+  min-height: 100vh;           
   padding: 20px;
   font-family: Arial, sans-serif;
+  background-color: #f4f4f4;   
 }
 
+
 .header {
-  text-align: center;                   /*centers headline*/
+  text-align: center;          
   margin-top: 0;
-  margin-bottom: 20px;                  /*distance to the next section */
+  margin-bottom: 20px;         
+  font-size: 2rem;             
+  color: #333;                 
 }
+
 
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 40px;                  /*distance to the foot area*/
-  flex: 1;                              /*flex area for the rest of the page*/
+  margin-bottom: 40px;         
+  flex: 1;                     
+  gap: 20px;                   
 }
+
 
 .locationContainer {
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 10px;
+  padding: 20px;               
   margin: 10px;
-  width: 200px;
+  width: 220px;                
   text-align: center;
+  background-color: #fff;      
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+  transition: transform 0.3s ease;  
 }
 
+.locationContainer:hover {
+  transform: translateY(-5px); 
+}
+
+
 .cold {
-  background-color: #00f;             /*blue cold weather*/
+  background-color: #007bff;  
+  color: #333;                
 }
 .cool {
-  background-color: #0ff;             /*light blue fresh weather*/
+  background-color: #17a2b8;  
+  color: #333;                
 }
 .mild {
-  background-color: rgb(236, 253, 0); /*green mild weather*/
+  background-color: #ffc107;  
+  color: #333;                
 }
 .warm {
-  background-color: rgb(255, 187, 0); /*yellow warm weather*/
+  background-color: #fd7e14;  
+  color: #333;                
 }
 .hot {
-  background-color: #f00;             /*red hot weather*/
+  background-color: #dc3545;  
+  color: #333;                
 }
+
 
 .text-center {
   text-align: center;
+}
+
+
+.weatherDetails p {
+  margin: 5px 0;  
+  font-size: 0.9rem;  
 }

@@ -4,15 +4,14 @@
 import React, { Component } from 'react';
 
 // ------------------------------------------------------------------------------
-// Import CSS
-// ------------------------------------------------------------------------------
-import 'leaflet/dist/leaflet.css';
-import "../../styles/WeatherLocations.module.css";
-
-// ------------------------------------------------------------------------------
 // Import Components
 // ------------------------------------------------------------------------------
 import WeatherLocations from './weatherlocations';
+
+// ------------------------------------------------------------------------------
+// Import CSS
+// ------------------------------------------------------------------------------
+import styles from "../../styles/WeatherLocations.module.css"; 
 
 // ------------------------------------------------------------------------------
 // Class
@@ -20,12 +19,12 @@ import WeatherLocations from './weatherlocations';
 class Weather extends Component {
   render() {
     return (
-      <div className="container my-5">
+      <div className={styles.container}>
         <div className="row">
           <div className="col-md-8">
             <div className="card mb-4">
               <div className="card-body text-center">
-                <h2 className="card-title">Aktuelle Wetterbedingungen</h2>
+                <h2 className={styles.header}>Wetter in unseren Familienstädten</h2>
                 <WeatherLocations />
               </div>
             </div>

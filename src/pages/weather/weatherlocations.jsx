@@ -7,7 +7,7 @@ import axios from "axios";
 // ------------------------------------------------------------------------------
 // Import CSS
 // ------------------------------------------------------------------------------
-import styles from "../../styles/WeatherLocations.module.css";
+import styles from "../../styles/WeatherLocations.module.css"; 
 
 // ------------------------------------------------------------------------------
 // Class
@@ -84,12 +84,12 @@ class WeatherLocations extends Component {
           className={`${styles.locationContainer} ${tempClass}`}
         >
           <h2>{location.name}</h2>
-          <div>
-            <p>Temperatur: {weather.main.temp}°C</p>
-            <p>Wolken: {weather.weather[0].description}</p>
-            <p>Luftfeuchtigkeit: {weather.main.humidity}%</p>
-            <p>Wind: {weather.wind.speed} m/s</p>
-            <p>Regen: {rainAmount} mm</p>
+          <div className={styles.weatherDetails}>
+            <p><strong>Temperatur:</strong> {weather.main.temp}°C</p>
+            <p><strong>Wolken:</strong> {weather.weather[0].description}</p>
+            <p><strong>Luftfeuchtigkeit:</strong> {weather.main.humidity}%</p>
+            <p><strong>Wind:</strong> {weather.wind.speed} m/s</p>
+            <p><strong>Regen:</strong> {rainAmount} mm</p>
           </div>
         </div>
       );
@@ -99,7 +99,6 @@ class WeatherLocations extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h1 className={styles.header}>Wetter in unseren Familienstädten</h1>
         <div className={styles.grid}>{this.renderWeatherInfo()}</div>
       </div>
     );
