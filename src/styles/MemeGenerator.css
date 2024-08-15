@@ -1,0 +1,53 @@
+.MemeGenerator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.5em;
+}
+
+.blue-screen {
+  background-color: #0000aa;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.blue-screen h1 {
+  font-size: 5em;
+}
+
+.blue-screen p {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.hide-navbar-footer .navbar,
+.hide-navbar-footer .footer {
+  display: none;
+}
+
+@keyframes flicker-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flicker {
+  animation: flicker-animation 0.1s infinite;
+}

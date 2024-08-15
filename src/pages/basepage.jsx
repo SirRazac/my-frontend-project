@@ -57,6 +57,9 @@ class BasePage extends Component {
                     <li className="list-group-item">
                       <a href="/recipe" className="text-decoration-none">Rezeptgenerator</a>
                     </li>
+                    <li className="list-group-item">
+                      <a href="/memegenerator" className="text-decoration-none">Meme-Generator</a>
+                    </li>
                   </ul>
                 </div>
               </div>

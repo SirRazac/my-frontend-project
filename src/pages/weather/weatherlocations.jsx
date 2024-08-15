@@ -7,7 +7,7 @@ import axios from "axios";
 // ------------------------------------------------------------------------------
 // Import CSS
 // ------------------------------------------------------------------------------
-import styles from "../../styles/WeatherLocations.module.css"; 
+import styles from "../../styles/WeatherLocations.module.css";
 
 // ------------------------------------------------------------------------------
 // Class
@@ -85,11 +85,21 @@ class WeatherLocations extends Component {
         >
           <h2>{location.name}</h2>
           <div className={styles.weatherDetails}>
-            <p><strong>Temperatur:</strong> {weather.main.temp}°C</p>
-            <p><strong>Wolken:</strong> {weather.weather[0].description}</p>
-            <p><strong>Luftfeuchtigkeit:</strong> {weather.main.humidity}%</p>
-            <p><strong>Wind:</strong> {weather.wind.speed} m/s</p>
-            <p><strong>Regen:</strong> {rainAmount} mm</p>
+            <p>
+              <strong>Temperatur:</strong> {weather.main.temp}°C
+            </p>
+            <p>
+              <strong>Wolken:</strong> {weather.weather[0].description}
+            </p>
+            <p>
+              <strong>Luftfeuchtigkeit:</strong> {weather.main.humidity}%
+            </p>
+            <p>
+              <strong>Wind:</strong> {weather.wind.speed} m/s
+            </p>
+            <p>
+              <strong>Regen:</strong> {rainAmount} mm
+            </p>
           </div>
         </div>
       );
