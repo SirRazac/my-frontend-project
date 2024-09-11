@@ -31,6 +31,13 @@ class QrCode extends Component {
     }
   };
 
+  handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      this.handleButtonClick();
+    }
+  }
+
   render() {
     return (
       <div className="container d-flex flex-column align-items-center vh-100 bg-light p-4">
@@ -46,6 +53,7 @@ class QrCode extends Component {
                 aria-describedby="button-addon1"
                 value={this.state.inputValue}
                 onChange={this.handleInputChange}
+                onKeyDown={this.handleKeyDown}
               />
               <button
                 className="btn btn-outline-dark"
@@ -65,6 +73,7 @@ class QrCode extends Component {
                 src={this.state.qrCodeUrl}
                 alt="Generierter QR-Code"
                 className="border border-dark mb-3"
+                style={{width: "20vw"}}
               />
             </div>
           )}
@@ -74,7 +83,7 @@ class QrCode extends Component {
             <h5 className="alert-heading">Wozu kann ich den QR-Code verwenden?</h5>
             <p>QR-Codes sind nützlich, um Informationen schnell zu teilen, Websites zu besuchen oder Produkte zu verlinken. Du kannst mit einem QR-Code-Scanner auf Deinem Smartphone gescannt werden, um die darin enthaltenen Informationen sofort zu erhalten.</p>
             <h5 className="alert-heading">Wie erstelle ich hier einen QR-Code?</h5>
-            <p>Gib einfach den gewünschten Text oder die URL in das Eingabefeld ein und klicke auf "Hier klicken". Der QR-Code wird sofort erstellt und angezeigt.</p>
+            <p>Gib einfach den gewünschten Text oder die URL in das Eingabefeld ein und klicke auf "Hier klicken" oder drücke die Enter-Taste. Der QR-Code wird sofort erstellt und angezeigt.</p>
           </div>
         </div>
       </div>

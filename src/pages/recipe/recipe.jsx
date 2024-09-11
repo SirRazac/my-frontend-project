@@ -61,6 +61,13 @@ const Recipe = () => {
     }
   };
 
+  const handleOnKey = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSearch();
+    }
+  }
+
   return (
     <div className="container mt-5">
       <h1 className="text-center mb-4">Rezeptsuche</h1>
@@ -71,6 +78,7 @@ const Recipe = () => {
           placeholder="Geben Sie Zutaten ein, z.B. Tomaten, Käse"
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
+          onKeyDown={handleOnKey}
         />
         <button className="btn btn-primary" onClick={handleSearch}>
           Suche

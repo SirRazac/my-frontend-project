@@ -3,6 +3,10 @@
 // ------------------------------------------------------------------------------
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+// ------------------------------------------------------------------------------
+// Import CSS
+// ------------------------------------------------------------------------------
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
