@@ -1,19 +1,52 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;           
   padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;   
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
 .header {
-  text-align: center;          
-  margin-top: 0;
-  margin-bottom: 20px;         
-  font-size: 2rem;             
-  color: #333;                 
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.bg-darkblue {
+  background-color: #001f3f;
+}
+
+.bg-lightblue {
+  background-color: #007bff;
+}
+
+.bg-yellow {
+  background-color: #ffc107;
+}
+
+.bg-orange {
+  background-color: #fd7e14;
+}
+
+.bg-red {
+  background-color: #dc3545;
 }
 
 
@@ -36,7 +69,8 @@
   text-align: center;
   background-color: #fff;      
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-  transition: transform 0.3s ease;  
+  transition: transform 0.3s ease; 
+  max-height: 20vw; 
 }
 
 .locationContainer:hover {
@@ -45,24 +79,23 @@
 
 
 .cold {
-  background-color: #0c30d1;  
-  color: #333;                
+  background-color: #0c30d1; /* Blau */
 }
+
 .cool {
-  background-color: #a6c6f9;  
-  color: #333;                
+  background-color: #a6c6f9; /* Hellblau */
 }
+
 .mild {
-  background-color: #ffc107;  
-  color: #333;                
+  background-color: #07ff6a; /* Grün */
 }
+
 .warm {
-  background-color: #fd7e14;  
-  color: #333;                
+  background-color: #fd7e14; /* Orange */
 }
+
 .hot {
-  background-color: #dc3545;  
-  color: #333;                
+  background-color: #dc3545; /* Rot */
 }
 
 
@@ -74,4 +107,11 @@
 .weatherDetails p {
   margin: 5px 0;  
   font-size: 0.9rem;  
+}
+
+.badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
 }
