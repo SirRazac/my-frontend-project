@@ -26,13 +26,13 @@ function GridTesting() {
                 <Grid item xs={12} md={6}>
                     <Calendar />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={6}>
                     <NotesField />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={6} md={6}>
                     <PaymentOverview />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={6} md={6}>
                     <CustomerProfileCard />
                 </Grid>
             </Grid>
