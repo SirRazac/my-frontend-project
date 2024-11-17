@@ -29,7 +29,7 @@ class Weather extends Component {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           minHeight: '100vh',
-          width: '100%', // Vollständige Breite
+          width: '100%',
           position: 'relative'
         }}
       >

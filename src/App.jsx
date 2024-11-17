@@ -25,6 +25,7 @@ import Weather from "./pages/weather/weather.jsx";
 import Recipe from "./pages/recipe/recipe.jsx";
 import HtmlTutorial from "./pages/htmltutorial/htmltutorial.jsx";
 import MemeGenerator from "./pages/meme/memegenerator.jsx";
+import GridTesting from "./pages/gridTesting/gridTesting.jsx";
 
 // ------------------------------------------------------------------------------
 // Class
@@ -48,6 +49,13 @@ const menuItems = [
       { label: "Meme-Generator", link: "/memegenerator" },
     ],
   },
+  {
+    label: "Menü 3",
+    link: "#about",
+    subItems: [
+      { label: "Grid Testing", link: "/gridtesting" },
+    ],
+  },
 ];
 class App extends Component {
   render() {
@@ -64,6 +72,7 @@ class App extends Component {
               <Route path="/recipe" element={<Recipe />} />
               <Route path="/htmltutorial" element={<HtmlTutorial />} />
               <Route path="/memegenerator" element={<MemeGenerator />} />
+              <Route path="/gridtesting" element={<GridTesting />} />
             </Routes>
             <footer className="bg-dark text-white text-center py-3 mt-auto">
               <div className="container">
