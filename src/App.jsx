@@ -26,6 +26,8 @@ import Recipe from "./pages/recipe/recipe.jsx";
 import HtmlTutorial from "./pages/htmltutorial/htmltutorial.jsx";
 import MemeGenerator from "./pages/meme/memegenerator.jsx";
 import GridTesting from "./pages/gridTesting/gridTesting.jsx";
+import NotificationPage from "./pages/notifications/notifications.jsx";
+
 
 // ------------------------------------------------------------------------------
 // Class
@@ -54,6 +56,7 @@ const menuItems = [
     link: "#about",
     subItems: [
       { label: "Grid Testing", link: "/gridtesting" },
+      { label: "Notification Testing", link: "/notificationPage" },
     ],
   },
 ];
@@ -73,6 +76,7 @@ class App extends Component {
               <Route path="/htmltutorial" element={<HtmlTutorial />} />
               <Route path="/memegenerator" element={<MemeGenerator />} />
               <Route path="/gridtesting" element={<GridTesting />} />
+              <Route path="/notificationPage" element={<NotificationPage />} />
             </Routes>
             <footer className="bg-dark text-white text-center py-3 mt-auto">
               <div className="container">
