@@ -10,13 +10,13 @@ import { getMessaging, getToken } from "firebase/messaging";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBwVoTWR6lqBK8BUsQK12l_UQfWLvs_eNo",
-  authDomain: "pushtest-a8d7a.firebaseapp.com",
-  projectId: "pushtest-a8d7a",
-  storageBucket: "pushtest-a8d7a.firebasestorage.app",
-  messagingSenderId: "464581164056",
-  appId: "1:464581164056:web:5ed0e5c4b7735ff4fc976d",
-  measurementId: "G-G20G63ZYCF",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 // Firebase initialisieren
@@ -32,7 +32,7 @@ const NotificationPage = () => {
       console.log("Berechtigung erteilt");
       try {
         const currentToken = await getToken(messaging, {
-          vapidKey: "BPyZOwS8jmIdqiZBipv-Qac3q6pPVhOpfdPpwKsI46LC0PufQU944YhHXgAicFJXtLdRL7wG-t8oF64np5DGtS8",
+          vapidKey: process.env.REACT_APP_FIREBASE_VAPID_KEY,
         });
         if (currentToken) {
           setToken(currentToken);
